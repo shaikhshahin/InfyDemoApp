@@ -1,9 +1,8 @@
 package com.shahin.infydemoapp.data.network.services;
 
 
-
-
 import com.shahin.infydemoapp.data.network.model.UserResponse;
+import com.shahin.infydemoapp.utils.AppConstants;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -15,7 +14,7 @@ import retrofit2.http.GET;
  */
 public class UserService {
 
-    private static final String URL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/";
+    private static final String URL = AppConstants.BASE_URL;
 
     private UserApi mUserApi;
 
@@ -39,7 +38,7 @@ public class UserService {
     }
 
     public interface UserApi {
-        @GET("facts.json")
+        @GET(AppConstants.FACTS_URL)
         Call<UserResponse> getAllUser();
     }
 

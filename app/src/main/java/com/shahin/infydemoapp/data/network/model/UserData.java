@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.shahin.infydemoapp.utils.AppConstants;
 
 /**
  * Created by Shahin on 8/11/2019.
@@ -12,15 +13,15 @@ import com.google.gson.annotations.SerializedName;
 public class UserData implements Parcelable {
 
     @Expose
-    @SerializedName("description")
+    @SerializedName(AppConstants.DESC)
     private String description;
 
     @Expose
-    @SerializedName("imageHref")
+    @SerializedName(AppConstants.IMAGE_HREF)
     private String image;
 
     @Expose
-    @SerializedName("title")
+    @SerializedName(AppConstants.TITLE)
     private String title;
 
     protected UserData(Parcel in) {
