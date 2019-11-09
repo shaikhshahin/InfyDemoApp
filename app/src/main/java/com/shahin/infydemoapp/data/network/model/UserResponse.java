@@ -9,13 +9,13 @@ import java.util.List;
  * Created by Shahin on 8/11/2019.
  */
 
-public class MovieResponse {
+public class UserResponse {
 
     @Expose
     @SerializedName("rows")
-    private List<Movie> movies;
+    private List<UserData> userData;
 
-    public List<Movie> getMovies() {
-        return movies;
+    public List<UserData> getUserData() {
+        return userData;
     }
 }

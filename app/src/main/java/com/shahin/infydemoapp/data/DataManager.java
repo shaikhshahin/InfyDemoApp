@@ -5,7 +5,7 @@ import com.preference.PowerPreference;
 import com.preference.Preference;
 import com.shahin.infydemoapp.App;
 import com.shahin.infydemoapp.data.db.database.LogDatabase;
-import com.shahin.infydemoapp.data.network.services.MovieService;
+import com.shahin.infydemoapp.data.network.services.UserService;
 
 /**
  * Created by Shahin on 8/11/2019.
@@ -34,8 +34,8 @@ public class DataManager {
         return LogDatabase.getInstance(App.getInstance());
     }
 
-    public MovieService getMovieService() {
-        return MovieService.getInstance();
+    public UserService getUserService() {
+        return UserService.getInstance();
     }
 
 }

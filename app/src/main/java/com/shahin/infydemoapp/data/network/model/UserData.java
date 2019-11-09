@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by Shahin on 8/11/2019.
  */
-public class Movie implements Parcelable {
+public class UserData implements Parcelable {
 
     @Expose
     @SerializedName("description")
@@ -23,25 +23,25 @@ public class Movie implements Parcelable {
     @SerializedName("title")
     private String title;
 
-    protected Movie(Parcel in) {
+    protected UserData(Parcel in) {
         description = in.readString();
         image = in.readString();
         title = in.readString();
     }
 
-    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+    public static final Creator<UserData> CREATOR = new Creator<UserData>() {
         @Override
-        public Movie createFromParcel(Parcel in) {
-            return new Movie(in);
+        public UserData createFromParcel(Parcel in) {
+            return new UserData(in);
         }
 
         @Override
-        public Movie[] newArray(int size) {
-            return new Movie[size];
+        public UserData[] newArray(int size) {
+            return new UserData[size];
         }
     };
 
-    public Movie(String description, String image, String title) {
+    public UserData(String description, String image, String title) {
         this.description = description;
         this.image = image;
         this.title = title;
