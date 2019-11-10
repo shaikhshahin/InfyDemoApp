@@ -1,5 +1,6 @@
 package com.shahin.infydemoapp.ui.activity.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.shahin.infydemoapp.R;
 import com.shahin.infydemoapp.data.DataManager;
 import com.shahin.infydemoapp.data.network.model.UserData;
+import com.shahin.infydemoapp.ui.activity.details.DetailsActivity;
 
 import java.util.List;
 
@@ -68,7 +70,12 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.OnMov
 
     @Override
     public void onMovieClicked(UserData userData) {
-         }
+
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("user", userData);
+        startActivity(intent);
+
+    }
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
